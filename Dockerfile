@@ -8,4 +8,5 @@ WORKDIR /app
 COPY . .
 
 # Step 4: Build the project using Maven
-RUN mvn clean install && mvn test
+RUN mvn clean && mvn install
+# RUN mvn test
