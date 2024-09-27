@@ -17,3 +17,9 @@ variable "dynamodb_table" {
  description = "Enter dynamodb table name for statefile locking"
  type = string
 }
+
+variable "instance_type" {
+ description = "Enter the EC2 instance type"
+ type = string 
+ default     = "t2.micro"
+}
