@@ -49,9 +49,13 @@ pipeline {
         }
 
         stage('Push the Docker Image to DockerHub'){
-            withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub')]) {
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub')]) {
                 sh 'docker login -u vasyvasf@gmail.com -p ${docker_hub}'
                 sh 'docker push srinivasulu0514/dockervasu'
+            }
+                }
             }
             
         }
