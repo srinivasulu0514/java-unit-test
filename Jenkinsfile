@@ -37,7 +37,7 @@ pipeline {
        stage('Performance Tests') {
            steps {
                echo "Running Performance Tests"
-               sh 'sh 'mvn verify''
+               sh 'mvn verify'
            }
        }
 
