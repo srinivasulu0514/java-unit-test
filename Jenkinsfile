@@ -45,6 +45,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 sh 'docker build -t java:latest .'
+                sh 'docker tag java:latest srinivasulu0514/dockervasu'
             }
         }
 
