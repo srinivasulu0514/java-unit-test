@@ -27,6 +27,20 @@ pipeline {
                 }
             }
         }
+        stage('Functional Tests') {
+           steps {
+               
+               echo "Running Functional Tests"
+               sh 'mvn verify'
+           }
+       }
+       stage('Performance Tests') {
+           steps {
+               echo "Running Performance Tests"
+               sh 'sh 'mvn verify''
+           }
+       }
+
         
         stage('Docker Build') {
             steps {
