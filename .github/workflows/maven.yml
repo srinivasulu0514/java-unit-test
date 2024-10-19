@@ -31,8 +31,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run a bash script
       run: |
-        pwd
-        ls
-        cd target
+        cd target && ls
           
       
