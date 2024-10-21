@@ -33,7 +33,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run a bash script
       run: |
+        mvn --version
         cd target && ls
-        mvn test
+        #mvn test
         
     
