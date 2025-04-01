@@ -5,7 +5,7 @@ FROM maven AS build
 WORKDIR /app
 
 # Step 3: Copy the source code into the container
-COPY . .
+COPY . ./dist/
 
 # Step 4: Build the project using Maven
 RUN mvn clean install
