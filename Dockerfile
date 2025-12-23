@@ -7,7 +7,7 @@ WORKDIR /app
 # Step 3: Copy the source code into the container
 COPY . ./dist/
 
-# Step 4: Build the project using Maven
+# Step 4: Build the project using Mavenn
 RUN java --version
 RUN mvn clean install
 RUN mvn test && mvn verify
